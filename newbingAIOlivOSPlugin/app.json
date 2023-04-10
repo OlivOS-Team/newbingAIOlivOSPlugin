@@ -1,0 +1,24 @@
+{
+    "name" : "NewBing人工智能",
+    "author" : "lunzhiPenxil",
+    "namespace" : "newbingAIOlivOSPlugin",
+    "info" : "使用 .nb 问题 格式 开始提问，使用 .bye 结束对话",
+    "priority" : 30000,
+    "version" : "1.0.0",
+    "svn" : 1,
+    "compatible_svn" : 100,
+    "message_mode" : "olivos_string",
+    "support" : [
+        {
+            "sdk" : "all",
+            "platform" : "all",
+            "model" : "all"
+        }
+    ],
+    "menu_config": [
+        {
+            "title": "修改Cookies",
+            "event": "newbingAIOlivOSPlugin_001"
+        }
+    ]
+}
