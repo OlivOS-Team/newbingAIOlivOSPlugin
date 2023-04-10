@@ -49,3 +49,4 @@
 本插件基于以下项目开发  
 [OlivOS](https://github.com/OlivOS-Team/OlivOS)  
 [EdgeGPT](https://github.com/acheong08/EdgeGPT)  
+[NewBing](https://www.bing.com/new)  
