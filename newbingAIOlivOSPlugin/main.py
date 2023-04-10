@@ -320,7 +320,8 @@ def readConfig():
     return res
 
 def openConfig():
-    #os.startfile(configPath, 'notepad.exe')
+    if not os.path.exists(configPath):
+        releaseConfig()
     os.popen('notepad.exe %s' % configPath)
 
 def formatUTF8WithBOM(data:bytes):
