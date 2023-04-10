@@ -2,6 +2,9 @@
 
 这是一个配合[New Bing](https://www.bing.com/new)使用的[OlivOS](https://github.com/OlivOS-Team/OlivOS)插件，可以将`New Bing`对话流对接到`OlivOS`所支持的交互场景。
 
+## 开始之前
+先说结论，本插件基于`Cookies`实现对微软账号的模拟登录，进而实现对`New Bing`的访问，所以想要正确使用本插件，你必须得先有一个能够使用`New Bing`服务的微软账号，本插件无法帮助你更快的获取`New Bing`服务的测试资格，也无法帮你绕开`New Bing`对于名额的限制，并且对你使用本插件可能导致的失去资格，甚至账号被封禁的风险不负任何责任。
+
 ## 开始使用
 1. 下载 `Cookie-Editor`  
    这取决于你的浏览器，通常来说`New Bing`会强制要求你使用`Edge`浏览器，那么你应当在`Edge`的扩展市场获取：  
@@ -41,3 +44,8 @@
 
 ## 注意事项
 特别需要注意的是，本插件仅适用于`Python 3.8+`，所以不可在适配`Win7`版本的`OlivOS`中使用，使用发布版请使用`0.11.7`以后版本的`OlivOS`，否则会缺少必要的依赖库
+
+## 鸣谢
+本插件基于以下项目开发  
+[OlivOS](https://github.com/OlivOS-Team/OlivOS)  
+[EdgeGPT](https://github.com/acheong08/EdgeGPT)  
