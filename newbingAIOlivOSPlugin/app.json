@@ -4,8 +4,8 @@
     "namespace" : "newbingAIOlivOSPlugin",
     "info" : "使用 .nb 问题 格式 开始提问，使用 .bye 结束对话",
     "priority" : 30000,
-    "version" : "1.0.0",
-    "svn" : 1,
+    "version" : "1.0.1",
+    "svn" : 2,
     "compatible_svn" : 100,
     "message_mode" : "olivos_string",
     "support" : [

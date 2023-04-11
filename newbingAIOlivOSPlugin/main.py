@@ -119,14 +119,14 @@ def unity_message(plugin_event:OlivOS.API.Event, Proc:OlivOS.pluginAPI.shallow):
                     ask_obj = replyCONTEXT_regWait(
                         plugin_event=plugin_event,
                         flagBlock='allowCommand',
-                        hash=contextRegHash([group_id, plugin_event.data.user_id])
+                        hash=contextRegHash(hash_list)
                     )
                     if ask_obj != None:
                         ask = ask_obj['res']
                         ask_id = ask_obj['msgid']
                 resAn = None
                 if ask != None:
-                    globalLog(2, '等待AI回复：%s ：\n%s' % (str(hash_list), ask))
+                    globalLog(2, '等待AI回复：%s ：%s' % (str(hash_list), ask))
                     try:
                         res = loop.run_until_complete(getAI(bot, ask))
                     except Exception as e:
