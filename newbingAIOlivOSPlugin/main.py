@@ -194,8 +194,6 @@ contextFeq = 0.1
 dictReplyContextReg = {}
 
 def replyCONTEXT_regGet(plugin_event:OlivOS.API.Event, tmp_reast_str:str):
-    res = False
-    flagResult = False
     tmp_hagID = None
     try:
         tmp_hagID = plugin_event.data.group_id
@@ -213,7 +211,10 @@ def replyCONTEXT_regGet(plugin_event:OlivOS.API.Event, tmp_reast_str:str):
     tmp_hash_list.append(contextRegHash([tmp_hagID, tmp_userID]))
     if tmp_hagID is not None:
         tmp_hash_list.append(contextRegHash([tmp_hagID, None]))
+    res_list = []
     for tmp_hash in tmp_hash_list:
+        res = False
+        flagResult = False
         if (
             tmp_bothash in dictReplyContextReg
         ) and (
@@ -257,6 +258,9 @@ def replyCONTEXT_regGet(plugin_event:OlivOS.API.Event, tmp_reast_str:str):
                     dictReplyContextReg[tmp_bothash][tmp_hash]['msgid'] = tmp_msgid
             else:
                 res = False
+        res_list = []
+    if True in res_list:
+        res = True
     return res
 
 def contextRegHash(data:list):
