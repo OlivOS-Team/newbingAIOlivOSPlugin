@@ -1,5 +1,6 @@
 import OlivOS
 
+import platform
 import urllib
 import traceback
 import time
@@ -54,7 +55,9 @@ class Event:
             unity_message(plugin_event, Proc)
 
     def menu(plugin_event, Proc):
-        openConfig()
+        if(platform.system() == 'Windows'):
+            if plugin_event.data.event == 'newbingAIOlivOSPlugin_001':
+                openConfig()
 
 def unity_message(plugin_event:OlivOS.API.Event, Proc:OlivOS.pluginAPI.shallow):
     messageObj = OlivOS.messageAPI.Message_templet(
